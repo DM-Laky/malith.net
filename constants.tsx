@@ -3,10 +3,10 @@ import React from 'react';
 // Contact Information
 export const CONTACT_INFO = {
     name: "Malith Lakshan",
-    email: "malith@solotechsolution.com",
-    phone: "+94 76 123 4567",
-    location: "Negombo, Western Province, Sri Lanka",
-    whatsappLink: "https://wa.me/94761234567"
+    email: "malithlakshan816@gmail.com",
+    phone: "+94 741907061",
+    location: "Polpithigama, Rambe",
+    whatsappLink: "https://wa.me/94741907061"
 };
 
 // Service Icons
@@ -397,13 +397,13 @@ export const SERVICES_DATA = [
 // Testimonials Data
 export const TESTIMONIALS_DATA = [
     {
-        name: "Samantha Perera",
-        company: "Ocean View Resort",
+        name: "Lahiru lakshan",
+        company: "Janaka Hardware ",
         quote: "Malith installed our entire CCTV system and it works flawlessly. His professionalism and attention to detail are outstanding. Highly recommended!"
     },
     {
-        name: "Rajesh Kumar",
-        company: "Kumar Electronics",
+        name: "Sampath Kumara",
+        company: "Kumara Electronics",
         quote: "We've been using SoloTech for all our computer repairs. Fast, reliable, and affordable. Malith really knows his stuff!"
     },
     {
