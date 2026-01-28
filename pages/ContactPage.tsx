@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => {
         }
     };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+       const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const validationErrors = validate();
         setErrors(validationErrors);
@@ -51,34 +51,11 @@ const ContactPage: React.FC = () => {
         if (Object.keys(validationErrors).length > 0) return;
 
         setFormStatus('submitting');
-        
-        try {
-            // Send form data to PHP mailer
-            const response = await fetch('/send-quote.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formState)
-            });
-
-            const result = await response.json();
-
-            if (response.ok && result.success) {
-                setFormStatus('success');
-                console.log('Email sent successfully:', result.message);
-            } else {
-                // Show error but allow retry
-                setFormStatus('idle');
-                setErrors({ submit: result.message || 'Failed to send email. Please try again.' });
-                console.error('Email sending failed:', result.message);
-            }
-        } catch (error) {
-            // Network or other error
-            setFormStatus('idle');
-            setErrors({ submit: 'Network error. Please check your connection and try again.' });
-            console.error('Error submitting form:', error);
-        }
+        // Simulate an API call
+        setTimeout(() => {
+            setFormStatus('success');
+            console.log('Form submitted:', formState);
+        }, 2000);
     };
     
     const handleResetForm = () => {
